@@ -38,7 +38,7 @@ namespace Calculator
         {
             bool endApp = false;
             PrintColorMessage(ConsoleColor.Green, "Basic Calculator in C#\r");
-            Console.WriteLine("--------------------\n");
+            Console.WriteLine("----------------------\n");
 
             while (!endApp)
             {
