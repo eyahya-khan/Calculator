@@ -37,8 +37,8 @@ namespace Calculator
         static void Main(string[] args)
         {
             bool endApp = false;
-            Console.WriteLine("Console Calculator in C#\r");
-            Console.WriteLine("------------------------\n");
+            PrintColorMessage(ConsoleColor.Green, "Basic Calculator in C#\r");
+            Console.WriteLine("--------------------\n");
 
             while (!endApp)
             {
@@ -70,14 +70,14 @@ namespace Calculator
                     numInput2 = Console.ReadLine();
                 }
 
-                Console.WriteLine("Choose an option from the following list:");
+                Console.WriteLine("\nChoose an option from the following list:");
                 Console.WriteLine("\ta - Add");
                 Console.WriteLine("\ts - Subtract");
                 Console.WriteLine("\tm - Multiply");
                 Console.WriteLine("\td - Divide");
-                Console.Write("Your option? ");
+                Console.Write("Your option is ");
 
-                string op = Console.ReadLine();
+                string op = Console.ReadLine().ToLower();
 
                 try
                 {
@@ -85,7 +85,6 @@ namespace Calculator
                     if (double.IsNaN(result))
                     {
                         PrintColorMessage(ConsoleColor.Red, "This operation will result in a mathematical error.\n");
-
                     }
                     else 
                         PrintColorMessage(ConsoleColor.Yellow, "Your result: " + result);
